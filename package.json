@@ -1,0 +1,30 @@
+{
+  "name": "majstorija",
+  "version": "1.0.0",
+  "description": "A node.js RESTful API",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "npm install --prefix frontend",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm run start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^5.1.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.24.0",
+    "mongoose": "^5.9.7",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "react-moment": "^0.9.7",
+    "validator": "^13.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

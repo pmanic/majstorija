@@ -1,0 +1,33 @@
+@import "../variables";
+
+.burger-button{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 10px;
+    height: 25px;
+    width: 20px;
+    background: transparent;
+    border: none;
+    cursor:pointer;
+    padding:0;
+    box-sizing: border-box;
+
+    &:focus{
+        outline:none !important;
+    }
+}
+
+.burger-button-line{
+    width: 20px;
+    height: 2px;
+    background: $white;
+    border-radius: 10px;
+}
+
+@media (min-width:769px){
+    .burger-button{
+        display:none;
+    }
+}
+

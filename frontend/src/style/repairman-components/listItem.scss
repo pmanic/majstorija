@@ -1,0 +1,216 @@
+@import "../variables";
+
+.listItem{
+    display:grid;
+    width: fit-content;
+    height: 240px;
+    color:$black;
+    background-color: $white;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow:-10px -10px 20px -5px rgba(255,255,255,1),10px 10px 20px -5px rgb(220, 220, 220);
+    margin:3%;
+    grid-template-columns:180px 450px 60px;
+    grid-template-rows:auto;
+    grid-template-areas:
+    "avatar info contact";
+
+    .listItem-avatar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        grid-area:avatar;
+        border-right: 1px solid rgb(216, 216, 216);
+        background: linear-gradient(to left,rgb(236, 236, 236),rgba(0,0,0,0));
+
+        .avatar{
+            height: 120px;
+        }
+    }
+
+    .listItem-info{
+        display:flex;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+        flex-direction: column;
+        grid-area:info;
+        text-align: center;
+
+        h2{
+            margin-top:-10px;
+            color:$mostlightblack;
+        }
+
+        p{
+            color:$black;
+            font-size: 16px;
+            margin-left: 7px;
+            margin-right: 30px;
+            margin-top: 0px;
+        }
+
+        .ime{
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .ostaloinfo{
+            display:flex;
+            flex-direction: row;
+        }
+
+        .ocena{
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin:7px;
+            display:flex;
+            flex-direction: row;
+
+            h2{
+                color: rgb(255, 200, 80);
+                margin-top: 0px;
+            }
+        }
+
+        .poslovi{
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin:7px;
+        }
+    }
+
+    .listItem-contact{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        grid-area:contact;
+        width: 100%;
+        height: 100%;
+        transition: 0.1s;
+
+        a{
+            height: 100%;
+            width: 100%;
+        }
+
+        .seeprofile{
+            display:flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            height: 100%;
+            background: $gray;
+            transition: 0.3s;
+
+            &:active{
+                box-shadow: inset 70px 0px 30px -50px rgba(0,0,0,0.2) !important;
+            }
+
+            &:hover{
+                filter:brightness(0.9);
+                transition: 0.3s;
+            }
+        }
+
+        .hire{
+            display:flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(73deg, #2ecc71 10%, #26c281 50%, #2ecc71 100%);
+            transition: 0.3s;
+
+            &:active{
+                box-shadow: inset 70px 0px 30px -50px rgba(0,0,0,0.2) !important;
+            }
+
+            &:hover{
+                filter:brightness(0.9);
+                transition: 0.3s;
+            }
+        }
+
+        img{
+            opacity: 0.7;
+            transition: 0.2s;
+        }
+    }
+}
+
+@media (max-width:768px){
+    .listItem{
+        grid-template-columns:250px !important;
+        height:560px;
+        grid-template-rows:auto;
+        grid-template-areas:
+        "avatar"
+        "info"
+        "contact";
+    }
+    .listItem-avatar{
+        border-right: none !important;
+        border-bottom: 1px solid rgb(216, 216, 216);
+        background: linear-gradient(rgb(236, 236, 236),rgba(0,0,0,0));
+    }
+    .listItem-info{
+        display:flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        grid-area:info;
+        text-align: center;
+
+        h1{
+            font-size: 30px !important;
+        }
+
+        h3{
+            margin-top:-10px;
+            color:$mostlightblack;
+        }
+
+        p{
+            color:$black;
+            font-size: 14px !important;
+            margin-left: 7px;
+            margin-right: 30px;
+            margin-top: 0px;
+        }
+
+        .ime{
+            text-align: center;
+        }
+
+        .ostaloinfo{
+            margin-top: 10px;
+            display:flex;
+            align-items: center;
+            flex-direction: column !important;
+
+            img{
+                width:20px;
+            }
+
+            p{
+                margin-right: 0px;
+                margin-left:0px;
+            }
+        }
+    }
+
+    .listItem-contact{
+        flex-direction: row !important;
+    }
+}
+
+@media (min-width:1800px){
+    .listItem{
+        grid-template-columns:180px 600px 60px;
+    }
+}

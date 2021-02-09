@@ -1,0 +1,190 @@
+@import "../variables";
+
+input[type="date"]{
+    /* remove standard background appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
+
+.pozadina{
+    width: 100%;
+    height: 100%;
+    background-color:rgba(31, 41, 68,0.7);
+    position: fixed;
+    display:block;
+    z-index: 999;
+    //overflow-y: scroll;
+    overflow-y:auto;
+    top: 0; right: 0; bottom: 0; left: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.login{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    //position: absolute;
+    width: 500px;
+    height: fit-content;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    //left: 50%;
+    //top:50%;
+    //transform: translate(100%, 0);
+    background-color: $white;
+    border-radius: 30px;
+    box-shadow: 0px 11px 0px 0px $red,0px 30px 150px 10px rgba(0,0,0,1);
+    z-index: 999;
+
+    .close{
+        height: 32px;
+        margin-top: 15px !important;
+        margin-left: 430px;
+        z-index: 1000;
+        opacity: 30%;
+        transition: 0.5s;
+
+
+        &:hover{
+            opacity: 80%;
+            transition: 0.5s;
+        }
+    }
+
+    .login-naslov{
+        h1{
+            font-size: 55px;
+            margin: 0px 0 20px 0;
+        }
+
+        .linija{
+            width: 100%;
+            height: 2px;
+            background-color: $red;
+            margin-bottom: 80px;
+        }
+    }
+
+    .login-forma{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+
+        label{
+            margin-top: 50px;
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: $black;
+
+            a{
+                color:$red;
+                text-decoration-line: underline;
+            }
+        }
+
+        .errorlabel{
+            margin-left:0 !important;
+            margin-top: -10px !important;
+            margin-bottom: 15px !important;
+            color:$red !important;
+            font-size: 16px !important;
+        }
+
+        .login-input {
+            display: flex;
+            width: 350px;
+            height: 25px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            border: 1px solid rgb(201, 201, 201);
+            transition: border 0.4s ease-out;
+            padding: 10px;
+            font-size: 18px;
+            color: $black;
+            background: rgb(238, 238, 238);
+
+            &:focus {
+                border: 1px solid rgba(31, 41, 68,0.6);
+                box-shadow: 0px 0px 7px 1px rgba(31, 41, 68,0.2);
+                outline: none;
+            }
+        }
+
+        .login-input-invalid{
+            background:rgba(255, 0, 0, 0.2) !important;
+            border: 1px solid $red !important;
+        }
+
+        .radio-input{
+            background-color: $white;
+
+            &:focus {
+                background-color: $red;
+                outline:none;
+            }
+            &:hover {
+                background-color: $red;
+            }
+            &:checked{
+                background-color: $red;
+                outline:none;
+            }
+        }
+
+        .login-button{
+            font-size: 17px !important;
+            display:flex;
+            align-items: center !important;
+            justify-content: center;
+            background-color: $black;
+            color:$white !important;
+            text-decoration: none !important;
+            font-size: 20px;
+            border: none;
+            margin-right: 15px;
+            width: 150px;
+            height: 45px;
+            border-radius: 30px;
+            margin-top: 60px;
+            transition: 0.5s;
+            &:focus{
+                outline:none !important;
+            }
+
+            &:hover{
+                background-color: $lightblack;
+                transition: 0.5s;
+                text-decoration: none !important;
+                border:0 !important;
+        }
+        }
+
+    }
+
+}
+
+@media (max-width:768px){
+    .login{
+        width: 380px;
+    }
+
+    .login-input{
+        width: 100% !important;
+    }
+
+    .pozadina{
+        overflow-x: hidden;
+    }
+
+    .close{
+        margin-left: 320px !important;
+    }
+}

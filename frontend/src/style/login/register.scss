@@ -1,0 +1,47 @@
+@import "../variables";
+
+
+
+.label{
+    margin-top: 4px !important;
+}
+
+.tip{
+    margin-left: -67px !important;
+    margin-right: 30px;
+}
+
+.login-input{
+    margin-bottom: 10px !important;
+}
+
+.kategorija{
+    margin-top:5px;
+    margin-bottom: 5px;
+    display:flex;
+    flex-direction: row;
+}
+.select-input{
+    display: flex;
+            width: 250px;
+            height: 45px;
+            margin-bottom: 0px;
+            border-radius: 15px;
+            border: 1px solid rgb(201, 201, 201);
+            transition: border 0.4s ease-out;
+            padding: 10px;
+            font-size: 18px;
+            color: $black;
+            background: rgb(238, 238, 238);
+            margin-left: 30px;
+
+            &:focus {
+                border: 1px solid rgba(31, 41, 68,0.6);
+                box-shadow: 0px 0px 7px 1px rgba(31, 41, 68,0.2);
+                outline: none;
+            }
+
+            &:hover{
+                outline: none !important;
+            }
+}

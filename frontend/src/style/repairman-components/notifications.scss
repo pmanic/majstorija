@@ -1,0 +1,29 @@
+@import "../variables";
+
+.notificationContainer{
+    display:flex;
+    flex-direction: row;
+    max-width: 250px;
+    height: 100x;
+    border-radius: 30px;
+    border-top-left-radius: 0px;
+    box-shadow:10px 10px 20px -5px rgb(220, 220, 220);
+    opacity: 0.9;
+    margin:2%;
+    background-color:$lightblack;
+    color:$white;
+    z-index: 600;
+
+    img{
+        margin:5px;
+    }
+
+    .notificationText{
+        display:flex;
+        flex-direction: column;
+
+        strong{
+            margin-top: 10px;
+        }
+    }
+}

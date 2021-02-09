@@ -1,0 +1,37 @@
+@import "../variables";
+
+.guide{
+    margin-top: 60px;
+    display:flex;
+    flex-direction: column;
+    align-items: left;
+    //justify-content: center;
+    color:$black;
+    text-align: left;
+
+    p{
+        font-size: 20px !important;
+        margin-top: 5px;
+    }
+    .red{
+        display:flex;
+        flex-direction: row;
+        margin-bottom: 30px;
+        min-height: 61px;
+        align-items: left;
+        justify-content: start;
+    }
+
+    .guide-icon{
+        max-height: 48px;
+        margin-right: 40px;
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .guide-icon{
+        margin-left: 30px !important;
+        margin-top: 10px;
+    }
+}

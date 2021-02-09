@@ -1,0 +1,185 @@
+@import "../variables";
+
+.profile-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:$black;
+    width: 100%;
+
+    .profile-header{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width:100%;
+        height: 130px;
+        background-color: $red;
+        margin-top: -43px;
+
+        .avatar{
+            position: absolute;
+            height: 110px;
+            margin-top: 60px;
+        }
+    }
+
+    .profile-ime{
+        margin-top: 40px;
+        color:$black;
+        text-align: center;
+        
+        h1{
+            color:$black;
+            margin:30px auto 10px auto;
+        }
+
+        h2{
+            color:$mostlightblack;
+            margin:0 0 30px 0;
+        }
+    }
+
+    .info{
+        display:flex;
+        flex-direction: column;
+        width: 100%;
+        height: fit-content;
+
+        h2{
+            text-align: center;
+            margin-top: 0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid $gray;
+            background-color: $lightbrown;
+            width: 100%;
+        }
+
+        .satnicaiocena{
+            display:flex;
+            flex-direction:row;
+            width: 100%;
+            color:$white;
+
+            h1{
+                margin-left: 20px;
+            }
+
+            .satnica{
+                display:flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                margin:3% 1.5% 1.5% 3%;
+                width:100%;
+                border-radius: 30px;
+                height: 50px;
+                background-color: $black;
+            }
+
+            .ocena{
+                display:flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                margin:3% 3% 1.5% 1.5%;
+                width:100%;
+                height: 50px;
+                border-radius: 30px;
+                background-color: $black;
+            }
+        }
+
+        .osnovno{
+            display:flex;
+            flex-direction: column;
+            margin:1.5% 1.5% 3% 3%;
+            width:100%;
+            border-radius: 30px;
+            border:1px solid $gray;
+            background-color: rgb(235, 235, 235);
+            overflow: hidden;
+            p{
+                margin-left: 15%;
+                font-size: 17px;
+            }
+        }
+
+        .iskustvoiedukacija{
+            display:flex;
+            flex-direction: column;
+            margin:1.5% 3% 3% 1.5%;
+            width: 100%;
+            
+            .iskustvo{
+                display:flex;
+                flex-direction: column;
+                width:100%;
+                margin-bottom: 3%;
+                align-items: center;
+                border-radius: 30px;
+                border:1px solid $gray;
+                background-color: rgb(235, 235, 235);
+                overflow: hidden;
+                padding-bottom: 20px;
+                
+            }
+
+            .edukacija{
+                display:flex;
+                flex-direction: column;
+                width:100%;
+                align-items: center;
+                margin-top: 3%;
+                border-radius: 30px;
+                border:1px solid $gray;
+                background-color: rgb(235, 235, 235);
+                overflow: hidden;
+                padding-bottom: 20px;
+            }
+
+            .iskustvoContainer{
+                display:flex;
+                flex-direction: column;
+                width: 80%;
+                align-items: center;
+                border-radius: 30px;
+
+                background-color: $lightbrown;
+                margin:2%;
+
+                p{
+                    text-align: center;
+                    max-width: 90%;
+                    margin:5px 0 5px 0;
+                }
+            }
+        }
+    }
+
+    a{
+        width: 100% !important;
+        text-decoration: none !important;
+        color: inherit;
+    }
+
+    .hireRepairman{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 80px;
+        background: linear-gradient(20deg, #2ecc71 10%, #26c281 50%, #2ecc71 100%);
+        transition: 0.5s;
+        user-select: none;
+
+        &:hover{
+            filter:brightness(0.8);
+            transition: 0.5s;
+        }
+
+        
+    }
+}

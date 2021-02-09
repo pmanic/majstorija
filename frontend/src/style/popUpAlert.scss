@@ -1,0 +1,140 @@
+@import "./variables";
+
+.popuptext{
+    color:$black;
+    text-align: center;
+}
+
+.profile-button{
+    font-size: 17px !important;
+    display:flex;
+    align-items: center !important;
+    justify-content: center;
+    background-color: $black;
+    color:$white !important;
+    text-decoration: none !important;
+    font-size: 20px;
+    border: none;
+    //margin-right: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 150px;
+    height: 45px;
+    border-radius: 30px;
+    //margin-top: 60px;
+    transition: 0.5s;
+
+    &:hover{
+        background-color: $lightblack;
+        transition: 0.5s;
+        width: 65%;
+        text-decoration: none !important;
+        border:0 !important;
+    }
+
+    &:before{
+        content:"Potvrdite";
+        transition: 0.5s;
+    }
+
+    &:focus{
+        outline:none !important;
+        transition: 0.5s;
+        width: 45px;
+        background-color: $green;
+
+        &:before{
+            content:"✓";
+            transition: 0.5s;
+        }
+    }
+}
+.profile-button-invalid{
+    font-size: 17px !important;
+    display:flex;
+    align-items: center !important;
+    justify-content: center;
+    background-color: $black;
+    color:$white !important;
+    text-decoration: none !important;
+    font-size: 20px;
+    border: none;
+    //margin-right: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 150px;
+    height: 45px;
+    border-radius: 30px;
+    //margin-top: 60px;
+    transition: 0.5s;
+
+    &:hover{
+        background-color: $lightblack;
+        transition: 0.5s;
+        width: 65%;
+        text-decoration: none !important;
+        border:0 !important;
+    }
+
+    &:before{
+        content:"Potvrdite";
+        transition: 0.5s;
+    }
+
+    &:focus{
+        outline:none !important;
+        transition: 0.5s;
+        width: 45px;
+        background-color: $red !important;
+
+        &:before{
+            content:"X" !important;
+            transition: 0.5s;
+        }
+    }
+}
+
+.buttonsHolder{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        margin:3%;
+        background-color: $mostlightblack;
+        transition: 0.5s;
+        color: $white;
+        font-size: 22px;
+
+        &:hover{
+            background-color: $lightblack;
+            transition: 0.5s;
+        }
+    }
+
+    .clickedButton{
+        transition: 0.5s;
+        background: linear-gradient(rgb(255,220,100),rgb(221, 182, 53));
+        width: 50px;
+        height: 50px;
+        box-shadow: 0px 14px 17px -5px rgba(0,0,0,0.25);
+        font-size: 26px;
+
+        &:hover{
+            background-color: rgb(255,220,100);
+            transition: 0.5s;
+        }
+    }
+}

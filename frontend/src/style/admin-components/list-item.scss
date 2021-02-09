@@ -1,0 +1,128 @@
+@import "../variables";
+
+.list-container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.listItem-holder{
+    display:flex;
+    flex-direction: row;
+    margin:2%;
+    align-items: center;
+    justify-content: center;
+}
+
+.listItemm{
+    display:grid;
+    width: fit-content;
+    width:300px;
+    height: fit-content;
+    color:$black;
+    background-color: $white;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow:-10px -10px 20px -5px rgba(255,255,255,1),10px 10px 20px -5px rgb(220, 220, 220);
+    margin:2%;
+    grid-template-columns:auto;
+    grid-template-rows:170px 180px 50px;
+    grid-template-areas:
+    "avatar "
+    "info"
+    "delete";
+
+    .listItem-avatarr{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        grid-area:avatar;
+
+        .avatar{
+            height: 100px;
+        }
+    }
+
+    .listItem-info{
+        display:flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        grid-area:info;
+        text-align: center;
+
+        h2{
+            margin-top:10px;
+            margin-bottom: 5px;
+            color:$mostlightblack;
+        }
+
+        h3{
+            margin-top: 0px;
+        }
+
+        p{
+            color:$black;
+            font-size: 16px;
+            margin-left: 7px;
+            margin-right: 30px;
+            margin-top: 0px;
+        }
+
+        
+
+        .ime{
+            text-align: center;
+        }
+
+        .ostaloinfo{
+            display:flex;
+            
+            flex-direction: column;
+            padding-bottom: 30px;
+
+            .row{
+                display: flex;
+                margin-left: 20px;
+                flex-direction: row;
+            }
+        }
+    }
+
+    .listItem-delete{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-color: $red;
+        grid-area:delete;
+        width: 100%;
+        height: 100%;
+        transition: 0.5s;
+
+        &:hover{
+            filter:brightness(0.8);
+            transition: 0.5s;
+        }
+    }
+
+    .listItem-ocena{
+        display:flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        grid-area:info;
+        text-align: center;
+    }
+}
+
+@media(max-width:768px){
+    .list-container{
+        margin-top: 100px;
+    }
+}
